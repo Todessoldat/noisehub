@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoiseHub</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 1980px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 1.0s ease-in-out;
+        width: 100%; /* 3 imagens */
+    }
+
+    .carousel-images img {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    /* Botões de navegação */
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .prev:hover, .next:hover {
+        background: rgba(0,0,0,0.8);
+    }
+</style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="carousel-images" id="carousel-images">
+        <img src="image/castelo1.png" alt="Imagem 1">
+        <img src="image/castelo2.png" alt="Imagem 2">
+        <img src="image/floresta1.png" alt="Imagem 3">
+    </div>
+    
+
+<script>
+    let indice = 0;
+    const imagens = document.getElementById("carousel-images");
+    const totalSlides = imagens.children.length;
+
+    function mostrarSlide() {
+        imagens.style.transform = `translateX(${-indice * 100}%)`;
+    }
+
+    function mudarSlide(direcao) {
+        indice = (indice + direcao + totalSlides) % totalSlides;
+        mostrarSlide();
+    }
+
+    // Troca automática a cada 3 segundos
+    setInterval(() => {
+        mudarSlide(1);
+    }, 3000);
+</script>
+
+</body>
+</html>
