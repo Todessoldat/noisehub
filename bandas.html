@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOISEHUB: Bandas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+      background-color: #050505;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #000;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+
+    .nav-link {
+      color: white;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .nav-link:hover {
+      color: #c40000;
+    }
+
+    .logo img {
+       width: 250px;
+    }
+
+    .logo {
+      display: inline-block;
+    }
+
+    .hero {
+      min-height: 600px;
+      background:
+        linear-gradient(to right, #000 25%, rgba(0,0,0,0.7), rgba(0,0,0,0.2)),
+        url("./image/afins/backg/banner_site_bandas.jpeg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 0.9;
+    }
+
+    .hero h1 span {
+      color: #c40000;
+    }
+
+    footer {
+      background-color: #000;
+      color: #777;
+      padding: 25px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .band-card {
+        background-color: #000;
+        border: 1px solid #333;
+        color: white;
+        margin-top: 15px;
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .rock-card {
+        height: 260px;
+        border: none;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .rock-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, #000 10%, rgba(0,0,0,0.2));
+    }
+
+    .rock-card h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 2;
+        color: white;
+        font-weight: 900;
+    }
+
+    .modal-content {
+        background-color: #080808;
+        color: white;
+        border: 1px solid #c40000;
+    }
+
+    .modal-content img {
+        border-bottom: 2px solid #c40000;
+    }
+
+    .modal-content h2 {
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-sm">
+          <a class="logo" href="index.html">
+            <img src="./image/logo/logo.png"> 
+          </a>
+    
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html">INÍCIO</a>
+            <a class="nav-link" href="#">BANDAS</a>
+            <a class="nav-link" href="#">NOTÍCIAS</a>
+            <a class="nav-link" href="#">AGENDA</a>
+            <a class="nav-link" href="#">CONTATO</a>
+          </div>
+        </div>
+      </nav>
+    
+      <section class="hero">
+        <div class="container">
+          <div class="col-md-6">
+            
+            <h1>BANDAS DO <span>MUNDO ROCK</span></h1>
+            <p class="lead mt-4">
+              Explore todo nosso catálogo de bandas de heavy metal, black metal, hard rock e muito mais!
+            </p>
+          </div>
+        </div>
+      </section>
+
+<section class="container my-5">
+  <h2 class="mb-4">Estilos do Rock</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card rock-card" style="background-image: url('image/bandas/heavy-metal.jpg');"
+           data-bs-toggle="modal" data-bs-target="#heavyModal">
+        <h3>Heavy Metal</h3>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card rock-card" style="background-image: url('image/bandas/hard-rock.jpg');"
+           data-bs-toggle="modal" data-bs-target="#hardModal">
+        <h3>Hard Rock</h3>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card rock-card" style="background-image: url('image/bandas/black-metal.jpg');"
+           data-bs-toggle="modal" data-bs-target="#blackModal">
+        <h3>Black Metal</h3>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+  <div class="card rock-card"
+       style="background-image: url('image/bandas/grunge.jpg');"
+       data-bs-toggle="modal"
+       data-bs-target="#grungeModal">
+
+    <h3>Grunge</h3>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+<div class="modal fade" id="heavyModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h2>Bandas de Heavy Metal</h2>
+
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/iron-maiden.jpg');"
+               data-bs-toggle="modal" data-bs-target="#ironModal">
+            <h3>Iron Maiden</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/black-sabbath.jpg');">
+            <h3>Black Sabbath</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/judas-priest.jpg');">
+            <h3>Judas Priest</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ironModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      
+      <img src="./image/bandas/iron-maiden-banner.jpg"
+           class="w-100"
+           style="height: 300px; object-fit: cover;">
+
+  
+      <div class="p-4">
+
+        <h2>Iron Maiden</h2>
+
+        <p>
+          <strong>Integrantes principais:</strong>
+          Bruce Dickinson, Steve Harris, Dave Murray,
+          Adrian Smith, Janick Gers e Nicko McBrain.
+        </p>
+
+        <p>
+          <strong>História:</strong>
+          Iron Maiden é uma banda britânica formada em 1975
+          e considerada uma das maiores bandas de heavy metal
+          da história.
+        </p>
+
+        <p>
+          <strong>Álbuns famosos:</strong>
+          The Number of the Beast, Powerslave,
+          Somewhere in Time e Fear of the Dark.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="hardModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h2>Bandas de Hard Rock</h2>
+
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/acdc.jpg');">
+            <h3>AC/DC</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/guns.jpg');">
+            <h3>Guns N' Roses</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/aerosmith.jpg');">
+            <h3>Aerosmith</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="blackModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h2>Bandas de Black Metal</h2>
+
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/mayhem.jpg');">
+            <h3>Mayhem</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/darkthrone.jpg');">
+            <h3>Darkthrone</h3>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card rock-card band-card" style="background-image: url('image/bandas/emperor.jpg');">
+            <h3>Emperor</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
