@@ -1,463 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NOISEHUB | Notícias</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<style>
-
-body{
-    background:#050505;
-    color:white;
-    font-family:Arial,sans-serif;
-}
-
-.navbar{
-    background:#000;
-    border-bottom:1px solid #1a1a1a;
-}
-
-.logo img{
-    width:250px;
-}
-
-.nav-link{
-    color:white;
-    font-weight:bold;
-    margin:0 10px;
-}
-
-.nav-link:hover{
-    color:#c40000;
-}
-
-.hero-news{
-    min-height:500px;
-    background:
-    linear-gradient(to right,#000 20%,rgba(0,0,0,.7),rgba(0,0,0,.3)),
-    url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1920');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-}
-
-.hero-news h1{
-    font-size:72px;
-    font-weight:900;
-    line-height:.9;
-}
-
-.hero-news span{
-    color:#c40000;
-}
-
-.tag{
-    background:#c40000;
-    display:inline-block;
-    padding:6px 18px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
-.section-title{
-    font-weight:900;
-    margin-bottom:30px;
-}
-
-.section-title span{
-    color:#c40000;
-}
-
-.featured-news{
-    background:#0d0d0d;
-    border:1px solid #222;
-    overflow:hidden;
-    margin-bottom:40px;
-}
-
-.featured-image{
-    height:500px;
-    background:
-    linear-gradient(to top,#000,transparent),
-    url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1920');
-    background-size:cover;
-    background-position:center;
-    position:relative;
-}
-
-.featured-content{
-    padding:30px;
-}
-
-.featured-content h2{
-    font-weight:900;
-}
-
-.news-card{
-    background:#0d0d0d;
-    border:1px solid #222;
-    overflow:hidden;
-    height:100%;
-    transition:.3s;
-}
-
-.news-card:hover{
-    transform:translateY(-5px);
-    border-color:#c40000;
-}
-
-.news-image{
-    height:220px;
-    background-size:cover;
-    background-position:center;
-}
-
-.news-content{
-    padding:20px;
-}
-
-.news-date{
-    color:#c40000;
-    font-weight:bold;
-    font-size:14px;
-}
-
-.news-category{
-    background:#c40000;
-    display:inline-block;
-    padding:4px 10px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-.btn-rock{
-    background:#c40000;
-    border:none;
-    color:white;
-    font-weight:bold;
-}
-
-.btn-rock:hover{
-    background:#8a0000;
-    color:white;
-}
-
-.sidebar-box{
-    background:#0d0d0d;
-    border:1px solid #222;
-    padding:20px;
-    margin-bottom:25px;
-}
-
-.sidebar-box h4{
-    color:#c40000;
-    font-weight:900;
-}
-
-.sidebar-box ul{
-    list-style:none;
-    padding:0;
-}
-
-.sidebar-box li{
-    padding:10px 0;
-    border-bottom:1px solid #222;
-}
-
-.sidebar-box li:last-child{
-    border:none;
-}
-
-footer{
-    background:#000;
-    color:#777;
-    padding:25px;
-    text-align:center;
-    margin-top:60px;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOISEHUB - Notícias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .hero {
+      min-height: 600px;
+      background:
+        linear-gradient(to right, #000 25%, rgba(0,0,0,0.7), rgba(0,0,0,0.2)),
+        url("./image/backg/banner_noticia.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+    
+  </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg">
-<div class="container-sm">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-sm">
+      <a class="logo" href="index.html">
+        <img src="./image/logo/logo.png"> 
+      </a>
 
-<a class="logo" href="index.html">
-<img src="./image/logo/logo.png">
-</a>
+      <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<button class="navbar-toggler bg-danger"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+      <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li><a class="nav-link" href="index.html">INÍCIO</a></li>
+        <li><a class="nav-link" href="bandas.html">BANDAS</a></li>
+        <li><a class="nav-link" href="noticias.html">NOTÍCIAS</a></li>
+        <li><a class="nav-link" href="agenda.html">AGENDA</a></li>
+        <li><a class="nav-link" href="hallfama.html">HALL DA FAMA</a></li>
+        <li><a class="nav-link" href="contato.html">CONTATO</a></li>
+        <li><a class="btn btn-rock ms-3" href="login.html">LOGIN</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
 
-<div class="collapse navbar-collapse" id="menu">
+  <section class="hero">
+    <div class="container">
+        <div class="col-md-6">
+      <h1>
+        NOTÍCIAS NO<span> MUNDO ROCK</span>
+      </h1>
 
-<ul class="navbar-nav ms-auto">
-<li><a class="nav-link" href="index.html">INÍCIO</a></li>
-<li><a class="nav-link" href="bandas.html">BANDAS</a></li>
-<li><a class="nav-link active" href="noticias.html">NOTÍCIAS</a></li>
-<li><a class="nav-link" href="agenda.html">AGENDA</a></li>
-<li><a class="nav-link" href="hallfama.html">HALL DA FAMA</a></li>
-<li><a class="nav-link" href="contato.html">CONTATO</a></li>
-</ul>
+      <p class="lead mt-4">
+        Fique por dentro dos acontecimentos que movimentam o cenário mundial do rock e metal.
+      </p>
+      </div>
+    </div>
+  </section>
 
-</div>
-</div>
-</nav>
+  <section class="container my-5">
 
-<section class="hero-news">
+    <h2 class="section-title">
+      MANCHETE <span>PRINCIPAL</span>
+    </h2>
 
-<div class="container">
+    <article class="featured-news">
 
-<div class="tag">
-ÚLTIMAS NOTÍCIAS
-</div>
+      <div class="featured-image"></div>
 
-<h1>MUNDO DO <span>ROCK</span></h1>
+      <div class="featured-content">
 
-<p class="lead mt-4">
-Fique por dentro dos acontecimentos que movimentam o cenário mundial do rock e metal.
-</p>
+        <p class="news-date">09 JUNHO 2026</p>
 
-</div>
+        <h2>
+          Metallica anuncia nova etapa de sua turnê mundial com datas inéditas na América Latina
+        </h2>
 
-</section>
+        <p class="mt-3">
+          A banda revelou novos shows e promete um espetáculo ainda maior para os fãs sul-americanos.
+        </p>
 
-<section class="container my-5">
+        <a href="#" class="btn btn-rock mt-2">
+          LER MATÉRIA
+        </a>
 
-<h2 class="section-title">
-MANCHETE <span>PRINCIPAL</span>
-</h2>
+      </div>
 
-<div class="featured-news">
+    </article>
 
-<div class="featured-image"></div>
+  </section>
 
-<div class="featured-content">
+  <section class="container my-5">
+    <div class="row">
 
-<p class="news-date">
-09 JUNHO 2026
-</p>
+      <div class="col-lg-8">
 
-<h2>
-Metallica anuncia nova etapa de sua turnê mundial com datas inéditas na América Latina
-</h2>
+        <h2 class="section-title">
+          ÚLTIMAS <span>NOTÍCIAS</span>
+        </h2>
 
-<p class="mt-3">
-A banda revelou novos shows e promete um espetáculo ainda maior para os fãs sul-americanos.
-</p>
+        <div class="row g-4">
 
-<button class="btn btn-rock mt-2">
-LER MATÉRIA
-</button>
+          <div class="col-md-6">
+            <article class="content-card">
 
-</div>
+              <div class="card-image" style="background-image:url('./image/img_noticias/noticia_rockfest.jpg');"></div>
 
-</div>
+              <div class="card-content">
+                <span class="card-tag">FESTIVAL</span>
 
-</section>
+                <h4>Rock Fest Brasil confirma line-up oficial</h4>
 
-<section class="container my-5">
+                <p class="card-date">08 JUNHO 2026</p>
 
-<div class="row">
+                <p>
+                  Festival reunirá bandas nacionais e internacionais.
+                </p>
 
-<div class="col-lg-8">
+                <a href="#" class="btn btn-rock">
+                  LER MAIS
+                </a>
+              </div>
 
-<h2 class="section-title">
-ÚLTIMAS <span>NOTÍCIAS</span>
-</h2>
+            </article>
+          </div>
 
-<div class="row g-4">
+          <div class="col-md-6">
+            <article class="content-card">
 
-<div class="col-md-6">
-<div class="news-card">
+              <div class="card-image" style="background-image:url('./image/img_noticias/noticia_anthrax.jpg');"></div>
 
-<div class="news-image"
-style="background-image:url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200');">
-</div>
+              <div class="card-content">
+                <span class="card-tag">ÁLBUM</span>
 
-<div class="news-content">
+                <h4>NoiseHub já ouviu antecipadamente o novo álbum de Anthrax!</h4>
 
-<div class="news-category">
-FESTIVAL
-</div>
+                <p class="news-date">07 JUNHO 2026</p>
 
-<h4>Rock Fest Brasil confirma line-up oficial</h4>
+                <p>
+                    O álbum promete ser um dos melhores lançamentos do ano.
+                </p>
 
-<p class="news-date">
-08 JUNHO 2026
-</p>
+                <a href="#" class="btn btn-rock">
+                  LER MAIS
+                </a>
+              </div>
 
-<p>
-Festival reunirá bandas nacionais e internacionais.
-</p>
+            </article>
+          </div>
 
-<button class="btn btn-rock">
-LER MAIS
-</button>
+          <div class="col-md-6">
+            <article class="content-card">
 
-</div>
-</div>
-</div>
+              <div class="card-image" style="background-image:url('./image/img_noticias/noticia_ghost.jpg');"></div>
 
-<div class="col-md-6">
-<div class="news-card">
+              <div class="card-content">
+                <span class="card-tag">BANDA</span>
 
-<div class="news-image"
-style="background-image:url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=1200');">
-</div>
+                <h4>Ghost revela detalhes de novo projeto</h4>
 
-<div class="news-content">
+                <p class="card-date">05 JUNHO 2026</p>
 
-<div class="news-category">
-ÁLBUM
-</div>
+                <p>
+                  Novidades devem ser apresentadas ainda este ano.
+                </p>
 
-<h4>Novo álbum de heavy metal lidera rankings</h4>
+                <a href="#" class="btn btn-rock">
+                  LER MAIS
+                </a>
+              </div>
 
-<p class="news-date">
-07 JUNHO 2026
-</p>
+            </article>
+          </div>
 
-<p>
-Lançamento conquista fãs e crítica especializada.
-</p>
+          <div class="col-md-6">
+            <article class="content-card">
 
-<button class="btn btn-rock">
-LER MAIS
-</button>
+              <div class="card-image" style="background-image:url('./image/img_noticias/noticia_semestre.jpg');"></div>
 
-</div>
-</div>
-</div>
+              <div class="card-content">
+                <span class="card-tag">SHOWS</span>
 
-<div class="col-md-6">
-<div class="news-card">
+                <h4>Turnês internacionais movimentam o segundo semestre</h4>
 
-<div class="news-image"
-style="background-image:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200');">
-</div>
+                <p class="card-date">04 JUNHO 2026</p>
 
-<div class="news-content">
+                <p>
+                  Grandes nomes do rock passarão pela América do Sul.
+                </p>
 
-<div class="news-category">
-BANDA
-</div>
+                <a href="#" class="btn btn-rock">
+                  LER MAIS
+                </a>
+              </div>
 
-<h4>Ghost revela detalhes de novo projeto</h4>
+            </article>
+          </div>
 
-<p class="news-date">
-05 JUNHO 2026
-</p>
+        </div>
+      </div>
 
-<p>
-Novidades devem ser apresentadas ainda este ano.
-</p>
+      <aside class="col-lg-4">
 
-<button class="btn btn-rock">
-LER MAIS
-</button>
+        <section class="sidebar-box">
+          <h4>MAIS LIDAS</h4>
 
-</div>
-</div>
-</div>
+          <ul>
+            <li>Metallica anuncia nova turnê</li>
+            <li>Iron Maiden retorna ao Brasil</li>
+            <li>Top 10 álbuns do mês</li>
+            <li>Festival europeu bate recorde</li>
+            <li>Bandas mais ouvidas da semana</li>
+          </ul>
+        </section>
 
-<div class="col-md-6">
-<div class="news-card">
+        <section class="sidebar-box">
+          <h4>DESTAQUES</h4>
 
-<div class="news-image"
-style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200');">
-</div>
+          <p>🎸 Novos lançamentos</p>
+          <p>🤘 Agenda de shows</p>
+          <p>🔥 Hall da Fama</p>
+          <p>⚡ Curiosidades do rock</p>
+        </section>
 
-<div class="news-content">
+      </aside>
 
-<div class="news-category">
-SHOWS
-</div>
+    </div>
+  </section>
 
-<h4>Turnês internacionais movimentam o segundo semestre</h4>
+  <footer>
+    @NoiseHub - Todos os direitos reservados =)
+  </footer>
 
-<p class="news-date">
-04 JUNHO 2026
-</p>
-
-<p>
-Grandes nomes do rock passarão pela América do Sul.
-</p>
-
-<button class="btn btn-rock">
-LER MAIS
-</button>
-
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-4">
-
-<div class="sidebar-box">
-
-<h4>MAIS LIDAS</h4>
-
-<ul>
-<li>Metallica anuncia nova turnê</li>
-<li>Iron Maiden retorna ao Brasil</li>
-<li>Top 10 álbuns do mês</li>
-<li>Festival europeu bate recorde</li>
-<li>Bandas mais ouvidas da semana</li>
-</ul>
-
-</div>
-
-<div class="sidebar-box">
-
-<h4>DESTAQUES</h4>
-
-<p>
-🎸 Novos lançamentos
-</p>
-
-<p>
-🤘 Agenda de shows
-</p>
-
-<p>
-🔥 Hall da Fama
-</p>
-
-<p>
-⚡ Curiosidades do rock
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-@NoiseHub - Todos os direitos reservados =)
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-

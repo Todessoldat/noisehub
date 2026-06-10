@@ -1,0 +1,435 @@
+/* vou usar em todas as paginas */
+    .hero h1 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 0.9;
+    }
+
+    .hero h1 span {
+      color: #c40000;
+    }
+
+        body {
+      background-color: #050505;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #000;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+
+    .nav-link {
+      color: white;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .nav-link:hover {
+      color: #c40000;
+    }
+
+    .logo img {
+       width: 250px;
+    }
+
+    .logo {
+      display: inline-block;
+    }
+
+    .btn-rock {
+      background-color: #c40000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 14px 28px;
+    }
+
+    .btn-rock:hover {
+      background-color: #8f0000;
+      color: white;
+    }
+
+    footer {
+      background-color: #000;
+      color: #777;
+      padding: 25px;
+      text-align: center;
+      margin-top: 50px;
+    }
+/* vou usar só em noticias e agenda*/
+    .content-card {
+        background-color: #0d0d0d;
+        border: 1px solid #222;
+        overflow: hidden;
+        transition: 0.3s;
+        height: 100%;
+    }
+
+    .content-card:hover {
+        transform: translateY(-5px);
+        border-color: #c40000;
+    }
+
+     .card-image {
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-tag {
+        display: inline-block;
+        background-color: #c40000;
+        padding: 5px 12px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-date {
+        color: #c40000;
+        font-weight: bold;
+    }
+
+    /* agenda*/
+
+     .section-title {
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .filter-btn {
+      background-color: #111;
+      color: white;
+      border: 1px solid #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+
+    .filter-btn:hover {
+      background-color: #c40000;
+      border-color: #c40000;
+    }
+
+    .event-location {
+      color: #aaa;
+    }
+
+    .countdown {
+      background-color: #0d0d0d;
+      border: 1px solid #222;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .countdown h3 {
+      color: #c40000;
+      font-weight: 900;
+    }
+
+    .timeline {
+      border-left: 3px solid #c40000;
+      padding-left: 25px;
+    }
+
+    .timeline-item {
+      margin-bottom: 30px;
+    }
+
+    .timeline-item h5 {
+      color: #c40000;
+    }
+
+    /*bandas*/
+
+    
+    .band-card {
+        background-color: #000;
+        border: 1px solid #333;
+        color: white;
+        margin-top: 15px;
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .rock-card {
+        height: 260px;
+        border: none;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .rock-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, #000 10%, rgba(0,0,0,0.2));
+    }
+
+    .rock-card h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 2;
+        color: white;
+        font-weight: 900;
+    }
+
+    .modal-content {
+        background-color: #080808;
+        color: white;
+        border: 1px solid #c40000;
+    }
+
+    .modal-content img {
+        border-bottom: 2px solid #c40000;
+    }
+
+    .modal-content h2 {
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+
+    /* contato */
+    
+    .form-control {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      color: white;
+    }
+
+    .form-control:focus {
+      background-color: #1a1a1a;
+      color: white;
+      border-color: #c40000;
+      box-shadow: none;
+    }
+
+    .form-control::placeholder {
+      color: #777;
+    }
+    /*hallfama*/
+
+    
+     .section-title {
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .section-title span {
+      color: #c40000;
+    }
+
+    .ranking-box {
+      background-color: #111;
+      border: 1px solid #222;
+      padding: 25px;
+      margin-bottom: 35px;
+    }
+
+    .ranking-title {
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .ranking-title span {
+      color: #c40000;
+    }
+
+    .rank-item {
+      background-color: #080808;
+      border: 1px solid #222;
+      padding: 15px;
+      margin-bottom: 12px;
+    }
+
+    .rank-number {
+      color: #c40000;
+      font-size: 24px;
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    /*index*/
+
+    
+    .tag {
+      background-color: #c40000;
+      display: inline-block;
+      padding: 6px 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .section-title span {
+      color: #c40000;
+    }
+
+    .band-card {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border: 1px solid #222;
+    }
+
+    .band-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #000, transparent);
+    }
+
+    .band-card h3 {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      font-weight: 900;
+    }
+
+    /*login*/
+    
+    .login-section {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 500px;
+      background-color: #111;
+      border: 1px solid #222;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .login-logo {
+        width: 280px;
+        max-width: 100%;
+    }
+
+    .login-subtitle {
+      text-align: center;
+      color: #999999;
+      margin-bottom: 30px;
+    }
+
+    .form-control {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      color: white;
+    }
+
+    .form-control:focus {
+      background-color: #1a1a1a;
+      color: white;
+      border-color: #c40000;
+      box-shadow: none;
+    }
+
+    .form-check-input:checked {
+      background-color: #c40000;
+      border-color: #c40000;
+    }
+
+    .form-control::placeholder {
+      color: #777;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+      color: #999;
+    }
+
+    .register-link a {
+      color: #c40000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    .modal-content {
+        background-color: #080808;
+        color: white;
+        border: 1px solid #c40000;
+    }
+
+    /*noticias*/
+
+
+    .section-title {
+      font-weight: 900;
+      margin-bottom: 30px;
+    }
+
+    .featured-news {
+      background-color: #0d0d0d;
+      border: 1px solid #222;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .featured-image {
+      height: 500px;
+      background:
+        linear-gradient(to top, #000, transparent),
+        url("./image/img_noticias/noticia_metallica.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .featured-content {
+      padding: 30px;
+    }
+
+    .featured-content h2 {
+      font-weight: 900;
+    }
+
+    .sidebar-box {
+      background-color: #0d0d0d;
+      border: 1px solid #222;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .sidebar-box h4 {
+      color: #c40000;
+      font-weight: 900;
+    }
+
+    .sidebar-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar-box li {
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    /*cabou*/

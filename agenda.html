@@ -1,408 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NOISEHUB | Agenda</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<style>
-
-body{
-    background:#050505;
-    color:white;
-    font-family:Arial,sans-serif;
-}
-
-.navbar{
-    background:#000;
-    border-bottom:1px solid #1a1a1a;
-}
-
-.logo img{
-    width:250px;
-}
-
-.nav-link{
-    color:white;
-    font-weight:bold;
-    margin:0 10px;
-}
-
-.nav-link:hover{
-    color:#c40000;
-}
-
-.hero-agenda{
-    min-height:500px;
-    background:
-    linear-gradient(to right,#000 25%,rgba(0,0,0,.7),rgba(0,0,0,.2)),
-    url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1920');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-}
-
-.hero-agenda h1{
-    font-size:72px;
-    font-weight:900;
-    line-height:0.9;
-}
-
-.hero-agenda span{
-    color:#c40000;
-}
-
-.tag{
-    background:#c40000;
-    display:inline-block;
-    padding:6px 18px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
-.section-title{
-    font-weight:900;
-    margin-bottom:25px;
-}
-
-.section-title span{
-    color:#c40000;
-}
-
-.filter-btn{
-    background:#111;
-    color:white;
-    border:1px solid #333;
-    font-weight:bold;
-    padding:10px 20px;
-    transition:.3s;
-}
-
-.filter-btn:hover{
-    background:#c40000;
-    border-color:#c40000;
-}
-
-.event-card{
-    background:#0d0d0d;
-    border:1px solid #222;
-    overflow:hidden;
-    transition:.3s;
-    height:100%;
-}
-
-.event-card:hover{
-    transform:translateY(-8px);
-    border-color:#c40000;
-}
-
-.event-image{
-    height:230px;
-    background-size:cover;
-    background-position:center;
-}
-
-.event-content{
-    padding:20px;
-}
-
-.event-category{
-    display:inline-block;
-    background:#c40000;
-    padding:5px 12px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-.event-date{
-    color:#c40000;
-    font-weight:bold;
-}
-
-.event-location{
-    color:#aaa;
-}
-
-.btn-rock{
-    background:#c40000;
-    color:white;
-    border:none;
-    font-weight:bold;
-    padding:10px 18px;
-}
-
-.btn-rock:hover{
-    background:#8d0000;
-    color:white;
-}
-
-.timeline{
-    border-left:3px solid #c40000;
-    padding-left:25px;
-}
-
-.timeline-item{
-    margin-bottom:30px;
-}
-
-.timeline-item h5{
-    color:#c40000;
-}
-
-.countdown{
-    background:#0d0d0d;
-    border:1px solid #222;
-    padding:40px;
-    text-align:center;
-}
-
-.countdown h3{
-    color:#c40000;
-    font-weight:900;
-}
-
-footer{
-    background:#000;
-    color:#777;
-    padding:25px;
-    text-align:center;
-    margin-top:60px;
-}
-
-</style>
+  <title>NOISEHUB - Agenda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .hero {
+      min-height: 600px;
+      background:
+        linear-gradient(to right, #000 25%, rgba(0,0,0,0.7), rgba(0,0,0,0.2)),
+        url("./image/backg/banner_agenda.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+    
+  </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg">
-<div class="container-sm">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-sm">
+      <a class="logo" href="index.html">
+        <img src="./image/logo/logo.png"> 
+      </a>
 
-<a class="logo" href="index.html">
-<img src="./image/logo/logo.png">
-</a>
+      <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<button class="navbar-toggler bg-danger"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+      <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li><a class="nav-link" href="index.html">INÍCIO</a></li>
+        <li><a class="nav-link" href="bandas.html">BANDAS</a></li>
+        <li><a class="nav-link" href="noticias.html">NOTÍCIAS</a></li>
+        <li><a class="nav-link" href="agenda.html">AGENDA</a></li>
+        <li><a class="nav-link" href="hallfama.html">HALL DA FAMA</a></li>
+        <li><a class="nav-link" href="contato.html">CONTATO</a></li>
+        <li><a class="btn btn-rock ms-3" href="login.html">LOGIN</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
 
-<div class="collapse navbar-collapse" id="menu">
+  <section class="hero">
+    <div class="container">
+        <div class="col-md-6">
+            <h1>AGENDA DO <span> MUNDO ROCK</span></h1>
 
-<ul class="navbar-nav ms-auto">
-<li><a class="nav-link" href="index.html">INÍCIO</a></li>
-<li><a class="nav-link" href="bandas.html">BANDAS</a></li>
-<li><a class="nav-link" href="#">NOTÍCIAS</a></li>
-<li><a class="nav-link active" href="agenda.html">AGENDA</a></li>
-<li><a class="nav-link" href="hallfama.html">HALL DA FAMA</a></li>
-<li><a class="nav-link" href="contato.html">CONTATO</a></li>
-</ul>
+            <p class="lead mt-4">
+                Os maiores shows, festivais e encontros da cena rock e metal.
+            </p>
+        </div>
+    </div>
+  </section>
 
-</div>
-</div>
-</nav>
+  <section class="container my-5">
 
-<section class="hero-agenda">
+    <h2 class="section-title">
+      EVENTOS EM <span>DESTAQUE</span>
+    </h2>
 
-<div class="container">
+    <div class="d-flex gap-2 flex-wrap mb-4">
+      <button class="filter-btn">TODOS</button>
+      <button class="filter-btn">INTERNACIONAIS</button>
+      <button class="filter-btn">NACIONAIS</button>
+      <button class="filter-btn">LOCAIS</button>
+    </div>
 
-<div class="tag">
-PRÓXIMOS EVENTOS
-</div>
+    <div class="row g-4">
 
-<h1>AGENDA <span>ROCK</span></h1>
+      <div class="col-lg-4 col-md-6">
+        <div class="content-card">
 
-<p class="lead mt-4">
-Os maiores shows, festivais e encontros da cena rock e metal.
-</p>
+          <div class="card-image" style="background-image:url('./image/img_agenda/show_iron.jpg');"></div>
 
-</div>
+          <div class="card-content">
+            <span class="card-tag">INTERNACIONAL</span>
 
-</section>
+            <h4>IRON MAIDEN WORLD TOUR</h4>
 
-<section class="container my-5">
+            <p class="card-date">📅 15 Setembro 2026</p>
+            <p class="event-location">📍 São Paulo - SP</p>
 
-<h2 class="section-title">
-EVENTOS EM <span>DESTAQUE</span>
-</h2>
+            <p>A lendária banda retorna ao Brasil para uma apresentação histórica.</p>
 
-<div class="d-flex gap-2 flex-wrap mb-4">
-<button class="filter-btn">TODOS</button>
-<button class="filter-btn">INTERNACIONAIS</button>
-<button class="filter-btn">NACIONAIS</button>
-<button class="filter-btn">LOCAIS</button>
-</div>
+            <a href="#" class="btn btn-rock">VER EVENTO</a>
+          </div>
 
-<div class="row g-4">
+        </div>
+      </div>
 
-<div class="col-lg-4 col-md-6">
-<div class="event-card">
+      <div class="col-lg-4 col-md-6">
+        <div class="content-card">
 
-<div class="event-image"
-style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200');">
-</div>
+          <div class="card-image" style="background-image:url('./image/img_agenda/show_heavy.jpg');"></div>
 
-<div class="event-content">
+          <div class="card-content">
+            <span class="card-tag">INTERNACIONAL</span>
 
-<div class="event-category">
-INTERNACIONAL
-</div>
+            <h4>METAL FEST 2026</h4>
 
-<h4>IRON MAIDEN WORLD TOUR</h4>
+            <p class="card-date">📅 02 Outubro 2026</p>
+            <p class="event-location">📍 Curitiba - PR</p>
 
-<p class="event-date">
-📅 15 Setembro 2026
-</p>
+            <p>Festival com diversas bandas de heavy metal e hard rock.</p>
 
-<p class="event-location">
-📍 São Paulo - SP
-</p>
+            <a href="#" class="btn btn-rock">VER EVENTO</a>
+          </div>
 
-<p>
-A lendária banda retorna ao Brasil para uma apresentação histórica.
-</p>
+        </div>
+      </div>
 
-<a href="#" class="btn btn-rock">
-VER EVENTO
-</a>
+      <div class="col-lg-4 col-md-6">
+        <div class="content-card">
 
-</div>
-</div>
-</div>
+          <div class="card-image" style="background-image:url('./image/img_agenda/show_indie.jpg');"></div>
 
-<div class="col-lg-4 col-md-6">
-<div class="event-card">
+          <div class="card-content">
+            <span class="card-tag">NACIONAL</span>
 
-<div class="event-image"
-style="background-image:url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200');">
-</div>
+            <h4>ROCK FEST BRASIL</h4>
 
-<div class="event-content">
+            <p class="card-date">📅 20 Outubro 2026</p>
+            <p class="event-location">📍 Florianópolis - SC</p>
 
-<div class="event-category">
-INTERNACIONAL
-</div>
+            <p>Bandas nacionais e independentes reunidas em um único evento.</p>
 
-<h4>METAL FEST 2026</h4>
+            <a href="#" class="btn btn-rock">VER EVENTO</a>
+          </div>
 
-<p class="event-date">
-📅 02 Outubro 2026
-</p>
+        </div>
+      </div>
 
-<p class="event-location">
-📍 Curitiba - PR
-</p>
+    </div>
+  </section>
 
-<p>
-Festival com diversas bandas de heavy metal e hard rock.
-</p>
+  <section class="container my-5">
 
-<a href="#" class="btn btn-rock">
-VER EVENTO
-</a>
+    <h2 class="section-title">
+      CALENDÁRIO <span>NOISEHUB</span>
+    </h2>
 
-</div>
-</div>
-</div>
+    <div class="timeline">
 
-<div class="col-lg-4 col-md-6">
-<div class="event-card">
+      <div class="timeline-item">
+        <h5>SETEMBRO 2026</h5>
+        <p>15 de Setembro - Iron Maiden World Tour - São Paulo</p>
+        <p>22 de Setembro - Ghost Live Show - Porto Alegre</p>
+      </div>
 
-<div class="event-image"
-style="background-image:url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=1200');">
-</div>
+      <div class="timeline-item">
+        <h5>OUTUBRO 2026</h5>
+        <p>02 de Outubro - Metal Fest 2026 - Curitiba</p>
+        <p>20 de Outubro - Rock Fest Brasil - Florianópolis</p>
+      </div>
 
-<div class="event-content">
+      <div class="timeline-item">
+        <h5>NOVEMBRO 2026</h5>
+        <p>19 de Novembro - Slipknot Experience - Rio de Janeiro</p>
+        <p>25 de Novembro - PovoLoko Rock Show - Joinville</p>
+      </div>
 
-<div class="event-category">
-NACIONAL
-</div>
+    </div>
+  </section>
 
-<h4>ROCK FEST BRASIL</h4>
+  <footer>
+    @NoiseHub - Todos os direitos reservados =)
+  </footer>
 
-<p class="event-date">
-📅 20 Outubro 2026
-</p>
-
-<p class="event-location">
-📍 Florianópolis - SC
-</p>
-
-<p>
-Bandas nacionais e independentes reunidas em um único evento.
-</p>
-
-<a href="#" class="btn btn-rock">
-VER EVENTO
-</a>
-
-</div>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="container my-5">
-
-<div class="countdown">
-
-<h3>PRÓXIMO GRANDE EVENTO</h3>
-
-<h2 class="mt-3">
-ROCK FEST BRASIL 2026
-</h2>
-
-<p class="lead">
-20 de Outubro de 2026 - Florianópolis/SC
-</p>
-
-</div>
-
-</section>
-
-<section class="container my-5">
-
-<h2 class="section-title">
-CALENDÁRIO <span>NOISEHUB</span>
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h5>SETEMBRO 2026</h5>
-<p>Iron Maiden World Tour - São Paulo</p>
-<p>Ghost Live Show - Porto Alegre</p>
-</div>
-
-<div class="timeline-item">
-<h5>OUTUBRO 2026</h5>
-<p>Metal Fest 2026 - Curitiba</p>
-<p>Rock Fest Brasil - Florianópolis</p>
-</div>
-
-<div class="timeline-item">
-<h5>NOVEMBRO 2026</h5>
-<p>Slipknot Experience - Rio de Janeiro</p>
-<p>Festival Underground - Joinville</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-@NoiseHub - Todos os direitos reservados =)
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
